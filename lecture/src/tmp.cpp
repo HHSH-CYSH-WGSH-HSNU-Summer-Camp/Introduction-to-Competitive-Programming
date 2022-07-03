@@ -1,10 +1,4 @@
-struct test {
-    int a, b, c;
-} A, B;
+int arr[5] = {1, 2, 3, 4, 5};
 
-test operator +(test _a, test _b) {
-    test res;
-    res.a = _a.a + _b.a;
-    res.b = _a.b + _b.b;
-    return res;
-}
+for (auto it: arr)
+    cout << it << " ";
