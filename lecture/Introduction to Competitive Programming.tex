@@ -667,7 +667,7 @@
 			\item $\mathcal{O}(\log n)$:二分搜、快速冪
 			\item $\mathcal{O}(n\log n)$:merge sort、某些分治演算法
 				\begin{itemize}
-					\item $\frac{1}{1}+\frac{1}{2}+\frac{1}{3}+...+\frac{1}{n}$ 也是 $\mathcal{O}(n \log n)$
+					\item $\frac{n}{1}+\frac{n}{2}+\frac{n}{3}+...+\frac{n}{n}$ 也是 $\mathcal{O}(n \log n)$
 				\end{itemize}
 			\item $\mathcal{O}(n!)$:排列枚舉
 			\item $\mathcal{O}(2^n)$:位元枚舉
@@ -704,7 +704,7 @@
 			\item<3-> 每次查詢最多會計算 $N$ 個元素，共查詢 $Q$ 次，所以時間複雜度是 $\mathcal{O}(NQ)$，顯然會 TLE
 			\item<4-> 我們會發現到說，在這 $Q$ 次的操作中，我們可能會重複計算到很多重疊的區間，例如我們如果已經算過 $[1, 10]$，那再算 $[2, 5]$ 時就重複計算到了區間
 			\item<5-> 那我們還不如預先將一些區間先算出來，後面要用就直接用
-			\item<6-> 我們可以定義 $pre_i$ 是 $1 \sim i$ 的前綴和，也就是 $\sum_{i=1}^{i}{a_i}$，那如果要取得 $[l, r]$ 的和，就只需要算 $pre_r - pre_{l-1}$ 就可以了
+			\item<6-> 我們可以定義 $pre_i$ 是 $1 \sim i$ 的前綴和，也就是 $\sum_{j=1}^{i}{a_j}$，那如果要取得 $[l, r]$ 的和，就只需要算 $pre_r - pre_{l-1}$ 就可以了
 			\item<7-> 這個就是最常見的\textbf{前綴和優化}，而利用區間相減得到另外一個區間的動作就叫做\textbf{差分}
 		\end{itemize}
 	\end{frame}
